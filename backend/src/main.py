@@ -25,7 +25,10 @@ def create_application() -> FastAPI:
         docs_url="/docs",
         redoc_url="/redoc",
     )
-
+    origins = [
+    "https://todo-app-phase2giaic.vercel.app",
+    "http://localhost:3000",
+]
     # Add CORS middleware
     app.add_middleware(
         CORSMiddleware,
